@@ -4,9 +4,13 @@ import os
 app = Flask(__name__)
 
 # Directory where uploaded files will be saved
-UPLOAD_FOLDER = '/app/uploaded_files'
+UPLOAD_FOLDER = 'app/uploaded_files'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+# Create the upload folder if it doesn't exist
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+    
 @app.route('/')
 def index():
     return render_template('upload.html')

@@ -1,0 +1,3 @@
+Remove IBM Cloud CLI
+Clear CLI cache in ~/.
+Delete instances of COS, Code Engine app, API key perhaps, Resource Group perhaps.
